@@ -28,7 +28,7 @@ app.get('/cart', (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-    res.sendFile(__dirname + '/signup.html');
+    res.sendFile(__dirname + '/Signup.html');
 });
 
 app.get('/product_detail', (req, res) => {
