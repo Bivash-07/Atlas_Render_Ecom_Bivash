@@ -1,11 +1,10 @@
 
 const mongoose = require("mongoose");
+require('dotenv').config();
 
-mongoose.connect("mongodb+srv://bivashchat:Bivash@123@cluster0.4wvvv.mongodb.net/Ecom", {
-// mongoose.connect("mongodb://localhost:27017/Ecom", {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // useCreateIndex: true
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 }).then(() => {
     console.log(`Connection successful with database`);
 }).catch((e) => {
